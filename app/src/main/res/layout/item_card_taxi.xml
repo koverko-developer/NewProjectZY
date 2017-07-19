@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <data>
+        <variable
+            name="taxi"
+            type="com.example.anika.newprojectzy.taxi.TaxiObject"/>
+        <variable name="handlers" type="com.example.anika.newprojectzy.taxi.MyHandlers" />
+    </data>
+
+    <android.support.v7.widget.CardView
+        android:onClick="@{handlers.onClickFriend}"
+        android:id="@+id/cardTaxi"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="4dp"
+        app:cardCornerRadius="4dp"
+        app:cardElevation="3dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal"
+            android:paddingBottom="4dp"
+            android:paddingLeft="8dp"
+            android:paddingRight="16dp"
+            android:paddingTop="4dp"
+            android:weightSum="7">
+
+            <ImageView
+                android:id="@+id/imageView6"
+                android:layout_width="match_parent"
+                android:layout_height="45dp"
+                android:layout_gravity="center_vertical"
+                android:layout_weight="6"
+                android:padding="6dp"
+                android:src="@{taxi.getImageUrl()}" />
+
+            <TextView
+                android:id="@+id/textViewNameTaxi"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_marginLeft="8dp"
+                android:layout_weight="1"
+                android:gravity="left"
+                android:text="@{taxi.getName()}"
+                android:textColor="@color/black"
+                android:textSize="16sp" />
+
+        </LinearLayout>
+    </android.support.v7.widget.CardView>
+</layout>

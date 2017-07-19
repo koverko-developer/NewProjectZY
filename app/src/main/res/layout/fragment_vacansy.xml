@@ -1,0 +1,234 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
+
+
+    <data>
+        <import type="android.view.View"/>
+
+        <variable
+            name="vacansy"
+            type="com.example.anika.newprojectzy.addAdvertising.classes.Vacansy"/>
+
+        <variable
+            name="handlerVacansy"
+            type="com.example.anika.newprojectzy.addAdvertising.handlers.MyHandlerVacansy"/>
+
+
+    </data>
+
+    <android.support.design.widget.CoordinatorLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="8dp"
+                android:weightSum="3">
+
+                <TextView
+                    android:id="@+id/textView9"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="bottom"
+                    android:layout_weight="2"
+                    android:text="Наименование" />
+
+                <EditText
+                    android:id="@+id/etNAME"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="bottom"
+                    android:layout_weight="1"
+                    android:ems="10"
+                    android:hint='ООО "Рога и копыта"'
+                    android:inputType="textPersonName"
+                    android:text="@={vacansy.name}" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="8dp"
+                android:weightSum="3">
+
+                <TextView
+                    android:text="Должность"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/textView95"
+                    android:layout_weight="2" />
+
+                <EditText
+                    android:id="@+id/etDolshnost"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:ems="10"
+                    android:hint="Продавец"
+                    android:inputType="textPersonName"
+                    android:text="@={vacansy.dolshnost}" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="8dp"
+                android:weightSum="3">
+
+                <TextView
+                    android:text="Требования"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/textView94"
+                    android:layout_weight="2" />
+
+                <EditText
+                    android:id="@+id/etTrebovaniya"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:ems="10"
+                    android:hint="Высшее образование"
+                    android:inputType="textPersonName"
+                    android:text="@={vacansy.trebovaniya}" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="8dp"
+                android:weightSum="3">
+
+                <TextView
+                    android:text="Прочее"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/textView93"
+                    android:layout_weight="2" />
+
+                <EditText
+                    android:id="@+id/etALL"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:ems="10"
+                    android:hint="Опыт работы не мнее 2-х лет"
+                    android:inputType="textPersonName"
+                    android:text="@={vacansy.all}" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="8dp"
+                android:weightSum="3">
+
+                <TextView
+                    android:text="УНП"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/textView92"
+                    android:layout_weight="2" />
+
+                <EditText
+                    android:id="@+id/etUNP"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:ems="10"
+                    android:hint="56156115"
+                    android:inputType="phone"
+                    android:text="@={vacansy.unp}" />
+            </LinearLayout>
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="8dp"
+                android:weightSum="3">
+
+                <TextView
+                    android:text="Телефон"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/textView91"
+                    android:layout_weight="2" />
+
+                <EditText
+                    android:id="@+id/etPHONE"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:ems="10"
+                    android:hint="+375297402740"
+                    android:inputType="phone"
+                    android:text="@={vacansy.phone}" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="8dp"
+                android:weightSum="3">
+
+                <TextView
+                    android:id="@+id/textView9177"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="2"
+                    android:text="Город" />
+
+                <EditText
+                    android:id="@+id/etTown"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:ems="10"
+                    android:hint="Минск"
+                    android:inputType="text"
+                    android:text="@={vacansy.town}" />
+            </LinearLayout>
+
+            <EditText
+                android:id="@+id/editText2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="8dp"
+                android:ems="10"
+                android:hint="Введите описание"
+                android:text="@={vacansy.descr}"
+                android:inputType="textMultiLine" />
+
+            <Button
+                android:id="@+id/send"
+                style="@style/ButtonAppThemeSend"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="8dp"
+                android:onClick="@{handlerVacansy.onClick}"
+                android:text="Отправить" />
+
+
+
+
+        </LinearLayout>
+        <ProgressBar
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:visibility="@{vacansy.isShow ? View.VISIBLE : View.GONE }"
+            android:layout_gravity="center" />
+    </android.support.design.widget.CoordinatorLayout>
+
+
+</layout>

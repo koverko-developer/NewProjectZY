@@ -1,0 +1,265 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
+<data>
+    <variable
+        name="resume"
+        type="com.example.anika.newprojectzy.addAdvertising.classes.Resume"/>
+
+    <variable
+        name="handler"
+        type="com.example.anika.newprojectzy.addAdvertising.handlers.MyHandlerResume"/>
+
+    <import type="android.view.View"/>
+</data>
+    <android.support.design.widget.CoordinatorLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="8dp"
+                android:weightSum="3">
+
+                <TextView
+                    android:text="ФИО"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/textView9"
+                    android:layout_weight="2" />
+
+                <EditText
+                    android:id="@+id/etFIO"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:ems="10"
+                    android:hint="Иванов Н.Н."
+                    android:inputType="textPersonName"
+                    android:text="@={resume.name}" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="8dp"
+                android:weightSum="3">
+
+                <TextView
+                    android:text="Специальность"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/textView95"
+                    android:layout_weight="2" />
+
+                <EditText
+                    android:id="@+id/etSPEC"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:ems="10"
+                    android:hint="Программист"
+                    android:inputType="textPersonName"
+                    android:text="@={resume.spec}" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="8dp"
+                android:weightSum="3">
+
+                <TextView
+                    android:text="Опыт работы"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/textView94"
+                    android:layout_weight="2" />
+
+                <EditText
+                    android:id="@+id/etOPIT"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:ems="10"
+                    android:hint="более 2-х лет"
+                    android:inputType="textPersonName"
+                    android:text="@={resume.opit}" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="8dp"
+                android:weightSum="3">
+
+                <TextView
+                    android:text="Образование"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/textView93"
+                    android:layout_weight="2" />
+
+                <EditText
+                    android:id="@+id/etEDUC"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:ems="10"
+                    android:hint="3 класса церковно-приходской"
+                    android:inputType="textPersonName"
+                    android:text="@={resume.education}" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="8dp"
+                android:weightSum="3">
+
+                <TextView
+                    android:text="Навыки и умения"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/textView92"
+                    android:layout_weight="2" />
+
+                <EditText
+                    android:id="@+id/etSKILL"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:ems="10"
+                    android:hint="Верста сайтов"
+                    android:inputType="textPersonName"
+                    android:text="@={resume.skills}" />
+            </LinearLayout>
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="8dp"
+                android:weightSum="3">
+
+                <TextView
+                    android:text="Телефон"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/textView91"
+                    android:layout_weight="2" />
+
+                <EditText
+                    android:id="@+id/etTEL"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:ems="10"
+                    android:hint="+375297402740"
+                    android:inputType="phone"
+                    android:text="@={resume.phone}" />
+            </LinearLayout>
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="8dp"
+                android:weightSum="3">
+
+                <TextView
+                    android:id="@+id/textView9177"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="2"
+                    android:text="Город" />
+
+                <EditText
+                    android:id="@+id/etTown"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:ems="10"
+                    android:hint="Минск"
+                    android:inputType="text"
+                    android:text="@={resume.town}" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="100dp"
+                android:orientation="horizontal"
+                android:paddingRight="16dp"
+                android:weightSum="3">
+
+                <TextView
+                    android:id="@+id/textView10"
+                    style="@style/TextViewCodeFont"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_weight="1"
+                    android:text="Фото" />
+
+                <ImageView
+                    android:id="@+id/imageView34"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="16dp"
+                    android:layout_marginRight="16dp"
+                    android:layout_weight="1"
+                    android:src="@{resume.img, default=@drawable/nophoto}" />
+
+                <Button
+                    android:id="@+id/button"
+                    style="@style/ButtonAppTheme"
+                    android:layout_width="match_parent"
+                    android:layout_height="30dp"
+                    android:layout_gravity="center_vertical"
+                    android:layout_weight="1"
+                    android:background="@color/cardview_dark_background"
+                    android:onClick="@{handler.onClickSelectImage}"
+                    android:text="выбрать файл"
+                    android:textColor="@color/back_nav_lv" />
+
+
+            </LinearLayout>
+
+            <EditText
+                android:id="@+id/editText2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="8dp"
+                android:ems="10"
+                android:hint="Введите описание"
+                android:text="@={resume.descr}"
+                android:inputType="textMultiLine" />
+
+            <Button
+                android:id="@+id/send"
+                style="@style/ButtonAppThemeSend"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="8dp"
+                android:onClick="@{handler.onClick}"
+                android:text="Отправить" />
+
+
+        </LinearLayout>
+
+        <ProgressBar
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:visibility="@{resume.isShow ? View.VISIBLE : View.GONE }"
+            android:layout_gravity="center" />
+    </android.support.design.widget.CoordinatorLayout>
+
+
+</layout>

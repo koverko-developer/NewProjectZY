@@ -1,0 +1,331 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
+    <data>
+        <import type="android.view.View"/>
+        <variable
+            name="organizations"
+            type="com.example.anika.newprojectzy.addAdvertising.classes.Ogranization"/>
+
+        <variable
+            name="handlerOrganizations"
+            type="com.example.anika.newprojectzy.addAdvertising.handlers.MyHandlerOrganizations"/>
+    </data>
+
+   <android.support.design.widget.CoordinatorLayout
+       android:layout_width="match_parent"
+       android:layout_height="match_parent">
+       <LinearLayout
+           android:layout_width="match_parent"
+           android:layout_height="match_parent"
+           android:orientation="vertical">
+
+
+
+           <LinearLayout
+               android:orientation="horizontal"
+               android:layout_width="match_parent"
+               android:weightSum="3"
+               android:layout_height="wrap_content"
+               android:minHeight="@dimen/lin_height">
+
+               <TextView
+                   android:id="@+id/textView9"
+                   style="@style/TextViewCodeFont"
+                   android:layout_width="match_parent"
+                   android:layout_height="wrap_content"
+                   android:layout_weight="2"
+                   android:text="Название" />
+
+               <EditText
+                   android:id="@+id/etFIO"
+                   android:layout_width="match_parent"
+                   android:layout_height="wrap_content"
+                   android:layout_weight="1"
+                   android:ems="10"
+                   android:hint='"Рога и копыта"'
+                   android:inputType="textPersonName"
+                   android:text="@={organizations.name}" />
+           </LinearLayout>
+
+           <LinearLayout
+               android:orientation="horizontal"
+               android:layout_width="match_parent"
+               android:weightSum="3"
+               android:layout_height="wrap_content"
+               android:minHeight="@dimen/lin_height">
+
+               <TextView
+                   android:text="УНП"
+                   style="@style/TextViewCodeFont"
+                   android:layout_width="match_parent"
+                   android:layout_height="wrap_content"
+                   android:id="@+id/textView95"
+                   android:layout_weight="2" />
+
+               <EditText
+                   android:id="@+id/etSPEC"
+                   android:layout_width="match_parent"
+                   android:layout_height="wrap_content"
+                   android:layout_weight="1"
+                   android:ems="10"
+                   android:hint="3151678"
+                   android:inputType="textPersonName"
+                   android:text="@={organizations.unp}" />
+           </LinearLayout>
+
+           <LinearLayout
+               android:orientation="horizontal"
+               android:layout_width="match_parent"
+               android:weightSum="3"
+               android:layout_height="wrap_content"
+               android:minHeight="@dimen/lin_height">
+
+               <TextView
+                   android:text="Руководитель"
+                   android:layout_width="match_parent"
+                   style="@style/TextViewCodeFont"
+                   android:layout_height="wrap_content"
+                   android:id="@+id/textView94"
+                   android:layout_weight="2" />
+
+               <EditText
+                   android:id="@+id/etOPIT"
+                   android:layout_width="match_parent"
+                   android:layout_height="wrap_content"
+                   android:layout_weight="1"
+                   android:ems="10"
+                   android:hint="Гришан М.Н."
+                   android:inputType="textPersonName"
+                   android:text="@={organizations.director}" />
+           </LinearLayout>
+
+           <LinearLayout
+               android:orientation="horizontal"
+               android:layout_width="match_parent"
+               android:weightSum="3"
+               android:layout_height="wrap_content"
+               android:minHeight="@dimen/lin_height">
+
+               <TextView
+                   android:text="Р/С"
+                   android:layout_width="match_parent"
+                   style="@style/TextViewCodeFont"
+                   android:layout_height="wrap_content"
+                   android:id="@+id/textView93"
+                   android:layout_weight="2" />
+
+               <EditText
+                   android:id="@+id/etEDUC"
+                   android:layout_width="match_parent"
+                   android:layout_height="wrap_content"
+                   android:layout_weight="1"
+                   android:ems="10"
+                   android:hint="4846664611"
+                   android:inputType="textPersonName"
+                   android:text="@={organizations.rs}" />
+           </LinearLayout>
+
+           <LinearLayout
+               android:orientation="horizontal"
+               android:layout_width="match_parent"
+               android:weightSum="3"
+               android:layout_height="wrap_content"
+               android:minHeight="@dimen/lin_height">
+
+               <TextView
+                   android:text="На основании чего "
+                   style="@style/TextViewCodeFont"
+                   android:layout_width="match_parent"
+                   android:layout_height="wrap_content"
+                   android:id="@+id/textView92"
+                   android:layout_weight="2" />
+
+               <EditText
+
+                   android:id="@+id/etSKILL"
+                   android:layout_width="match_parent"
+                   android:layout_height="wrap_content"
+                   android:layout_weight="1"
+                   android:ems="10"
+                   android:hint="устав"
+                   android:inputType="textPersonName"
+                   android:text="@={organizations.osnova}" />
+           </LinearLayout>
+           <LinearLayout
+               android:orientation="horizontal"
+               android:layout_width="match_parent"
+               android:weightSum="3"
+               android:layout_height="wrap_content"
+               android:minHeight="@dimen/lin_height">
+
+               <TextView
+                   android:text="Форма собственности"
+                   style="@style/TextViewCodeFont"
+                   android:layout_width="match_parent"
+                   android:layout_height="wrap_content"
+                   android:id="@+id/textView91"
+                   android:layout_weight="2" />
+
+               <EditText
+
+                   android:id="@+id/etTEL"
+                   android:layout_width="match_parent"
+                   android:layout_height="match_parent"
+                   android:layout_weight="1"
+                   android:ems="10"
+                   android:hint="ООО"
+                   android:inputType="text"
+                   android:text="@={organizations.forma}" />
+           </LinearLayout>
+
+
+           <LinearLayout
+               android:orientation="horizontal"
+               android:layout_width="match_parent"
+               android:weightSum="3"
+               android:layout_height="wrap_content"
+               android:visibility="gone"
+               android:minHeight="@dimen/lin_height">
+
+               <TextView
+                   android:text="E-mail"
+                   style="@style/TextViewCodeFont"
+                   android:layout_width="match_parent"
+                   android:layout_height="wrap_content"
+                   android:id="@+id/textView912"
+                   android:layout_weight="2" />
+
+               <EditText
+
+                   android:layout_width="match_parent"
+                   android:layout_height="match_parent"
+                   android:text="@={organizations.email}"
+                   android:ems="10"
+                   android:id="@+id/etTEL2"
+                   android:layout_weight="1"
+                   android:inputType="phone" />
+           </LinearLayout>
+
+           <LinearLayout
+               android:orientation="horizontal"
+               android:layout_width="match_parent"
+               android:weightSum="3"
+               android:layout_height="wrap_content"
+               android:minHeight="@dimen/lin_height">
+
+               <TextView
+                   android:text="E-mail"
+                   style="@style/TextViewCodeFont"
+                   android:layout_width="match_parent"
+                   android:layout_height="wrap_content"
+                   android:id="@+id/textView9121"
+                   android:layout_weight="2" />
+
+               <EditText
+
+                   android:id="@+id/etTEL21"
+                   android:layout_width="match_parent"
+                   android:layout_height="wrap_content"
+                   android:layout_weight="1"
+                   android:ems="10"
+                   android:hint="ivanov@mail.ru"
+                   android:inputType="textEmailAddress"
+                   android:text="@={organizations.email}" />
+           </LinearLayout>
+           <LinearLayout
+               android:orientation="horizontal"
+               android:layout_width="match_parent"
+               android:weightSum="3"
+               android:layout_height="wrap_content">
+
+               <TextView
+                   android:id="@+id/textView91221"
+                   style="@style/TextViewCodeFont"
+                   android:layout_width="match_parent"
+                   android:layout_height="wrap_content"
+                   android:layout_weight="2"
+                   android:text="Телефон" />
+
+               <EditText
+
+                   android:id="@+id/etTEL221"
+                   android:layout_width="match_parent"
+                   android:layout_height="wrap_content"
+                   android:layout_weight="1"
+                   android:ems="10"
+                   android:hint="+375257202603"
+                   android:inputType="phone"
+                   android:text="@={organizations.phone}" />
+           </LinearLayout>
+
+           <LinearLayout
+               android:layout_width="match_parent"
+               android:layout_height="100dp"
+               android:orientation="horizontal"
+               android:paddingRight="16dp"
+               android:weightSum="3">
+
+               <TextView
+                   android:id="@+id/textView10"
+                   style="@style/TextViewCodeFont"
+                   android:layout_width="match_parent"
+                   android:layout_height="wrap_content"
+                   android:layout_gravity="center_vertical"
+                   android:layout_weight="1"
+                   android:text="Фото" />
+
+               <ImageView
+                   android:id="@+id/imageView34"
+                   android:layout_width="match_parent"
+                   android:layout_height="match_parent"
+                   android:layout_marginLeft="16dp"
+                   android:layout_marginRight="16dp"
+                   android:layout_weight="1"
+                   android:src="@{organizations.img, default=@drawable/nophoto}" />
+
+               <Button
+                   android:id="@+id/button"
+                   style="@style/ButtonAppTheme"
+                   android:layout_width="match_parent"
+                   android:layout_height="30dp"
+                   android:layout_gravity="center_vertical"
+                   android:layout_weight="1"
+                   android:background="@color/cardview_dark_background"
+                   android:onClick="@{handlerOrganizations.onClickSelectImage}"
+                   android:text="выбрать файл"
+                   android:textColor="@color/back_nav_lv" />
+
+
+           </LinearLayout>
+
+           <EditText
+               android:id="@+id/editText2"
+               android:layout_width="match_parent"
+               android:layout_height="wrap_content"
+               android:layout_margin="8dp"
+               android:ems="10"
+               android:hint="Введите описание"
+               android:text="@={organizations.descr}"
+               android:inputType="textMultiLine" />
+
+           <Button
+               android:id="@+id/send"
+               style="@style/ButtonAppThemeSend"
+               android:layout_width="match_parent"
+               android:layout_height="wrap_content"
+               android:layout_margin="8dp"
+               android:onClick="@{handlerOrganizations.onClick}"
+               android:text="Отправить" />
+
+
+
+       </LinearLayout>
+       <ProgressBar
+           android:layout_width="wrap_content"
+           android:layout_height="wrap_content"
+           android:visibility="@{organizations.isShow ? View.VISIBLE : View.GONE }"
+           android:layout_gravity="center" />
+   </android.support.design.widget.CoordinatorLayout>
+
+
+</layout>

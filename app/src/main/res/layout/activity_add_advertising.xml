@@ -1,0 +1,171 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<android.support.design.widget.CoordinatorLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/back_nav_lv">
+
+    <android.support.design.widget.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:theme="@style/AppTheme.AppBarOverlay">
+
+        <android.support.v7.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="56dp"
+            android:background="@color/black"
+            android:titleTextColor="@color/back_nav_lv"
+            app:popupTheme="@style/AppTheme.PopupOverlay" />
+
+    </android.support.design.widget.AppBarLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="56dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" >
+
+            <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            tools:context="com.example.anika.newprojectzy.addAdvertising.AddAdvertisingActivity">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="8dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:orientation="horizontal"
+                    android:gravity="center"
+                    android:layout_height="45dp">
+
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:background="@drawable/btn_bg"
+                        android:gravity="center">
+
+                        <RadioButton
+                                    android:id="@+id/radioButtonOrg"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="1"
+                                    android:checked="true"
+                                    android:text="Организация"
+                            android:textColor="@color/back_nav_lv"
+                                    android:layout_marginRight="8dp"
+                                    android:gravity="left|center_vertical"
+
+                                    android:theme="@style/RadioButtonTheme"
+                                    android:padding="4dp"
+                                    android:paddingLeft="4dp"
+                                    android:textSize="16sp"
+                            android:layout_marginLeft="8dp" />
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:background="@drawable/btn_bg"
+                        android:gravity="center">
+
+                        <RadioButton
+                            android:id="@+id/radioButtonAdv"
+                            android:theme="@style/RadioButtonTheme"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="Объявление"
+
+                            android:textColor="@color/back_nav_lv"
+                            android:gravity="left|center_vertical"
+                            android:layout_marginLeft="8dp"
+                            android:paddingLeft="4dp"
+                            android:textSize="16sp"
+                            android:layout_marginRight="8dp" />
+                    </RelativeLayout>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:orientation="horizontal"
+                    android:layout_height="45dp"
+                    android:weightSum="2">
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:background="@drawable/btn_bg"
+                        android:gravity="center">
+
+                        <RadioButton
+                            android:id="@+id/radioButtonVac"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:theme="@style/RadioButtonTheme"
+                            android:text="Вакансия"
+
+                            android:textColor="@color/back_nav_lv"
+                            android:gravity="left|center_vertical"
+                            android:layout_marginRight="8dp"
+                            android:paddingLeft="4dp"
+                            android:textSize="16sp"
+                            android:layout_marginLeft="8dp" />
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:background="@drawable/btn_bg"
+                        android:gravity="center">
+
+                        <RadioButton
+                            android:id="@+id/radioButtonRes"
+                            android:layout_width="match_parent"
+                            android:theme="@style/RadioButtonTheme"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="Резюме"
+
+                            android:textColor="@color/back_nav_lv"
+                            android:gravity="left|center_vertical"
+                            android:layout_marginLeft="8dp"
+                            android:paddingLeft="4dp"
+                            android:textSize="16sp"
+                            android:layout_marginRight="8dp" />
+                    </RelativeLayout>
+
+                </LinearLayout>
+            </LinearLayout>
+
+            <FrameLayout
+                android:id="@+id/container"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+            </FrameLayout>
+
+        </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+
+</android.support.design.widget.CoordinatorLayout>
