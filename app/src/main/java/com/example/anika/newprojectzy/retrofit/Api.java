@@ -87,4 +87,7 @@ public interface Api {
     @GET("zy/get_vacansy_id.php")
     Call<List<Vacansy>> getVacansyID(@Query("id") int id);
 
+    @GET("zy/get_vacansy_id.php")
+    Call<List<Vacansy>> getVacansydsdsdID(@Query("id") int id);
+
 }
