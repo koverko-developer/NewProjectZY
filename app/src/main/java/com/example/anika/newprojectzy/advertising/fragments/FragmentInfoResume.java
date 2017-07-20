@@ -81,7 +81,7 @@ public class FragmentInfoResume extends Fragment {
                     List<Resume> resume1 = new ArrayList<Resume>();
                     resume1 = response.body();
                     Resume resume = resume1.get(0);
-
+                    object.setId(new ObservableField<String>(resume.getId()));
                     object.setDate(new ObservableField<String>(resume.getDate()));
                     object.setImg(new ObservableField<String>(resume.getImg()));
                     object.setFio(new ObservableField<String>(resume.getFio()));

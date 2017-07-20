@@ -23,7 +23,7 @@ public class AdvertisingHandlerFavorite {
 
         public void onClick(View view){
             Log.i(MyHandlers.class.getSimpleName(),"Now Friend");
-            //activity.startInfo(position);
+            activity.startInfo(position);
         }
 
         public void onClickEnemy(View view){

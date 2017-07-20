@@ -19,6 +19,7 @@ import com.example.anika.newprojectzy.AllInfoActivity;
 import com.example.anika.newprojectzy.BR;
 import com.example.anika.newprojectzy.R;
 import com.example.anika.newprojectzy.advertising.classes.InfoAdvertisingObject;
+import com.example.anika.newprojectzy.favorite.classes.AdvertisingObjectFavorite;
 import com.example.anika.newprojectzy.retrofit.Advertising;
 import com.example.anika.newprojectzy.retrofit.App;
 
@@ -44,12 +45,13 @@ public class FragmentInfoAdvertising extends Fragment {
     View v;
     AllInfoActivity allInfoActivity;
     InfoAdvertisingObject object = new InfoAdvertisingObject();
-    int pid, id;
+    int pid, id, type;
 
-    public FragmentInfoAdvertising(AllInfoActivity allInfoActivity, int pid, int id){
+    public FragmentInfoAdvertising(AllInfoActivity allInfoActivity, int pid, int id, int type){
         this.allInfoActivity = allInfoActivity;
         this.pid = pid;
         this.id = id;
+        this.type = type;
     }
 
     @Nullable
@@ -66,7 +68,8 @@ public class FragmentInfoAdvertising extends Fragment {
 
         binding.setVariable(BR.adveristingInfo, object);
 
-        getInfo();
+        if(type==0)getInfo();
+        else getInfoDB();
 
         v = binding.getRoot();
         return v;
@@ -94,6 +97,19 @@ public class FragmentInfoAdvertising extends Fragment {
             }
         });
     }
+
+    private void getInfoDB(){
+        AdvertisingObjectFavorite favorite = allInfoActivity.readDBAdvertising().get(0);
+
+        object.setImg(new ObservableField<String>(favorite.getImg().get()));
+        object.setDate(new ObservableField<String>(favorite.getDate().get()));
+        object.setDescription(new ObservableField<String>(favorite.getDescription().get()));
+        object.setEmail(new ObservableField<String>(favorite.getEmail().get()));
+        object.setPhone(new ObservableField<String>(favorite.getPhone().get()));
+        object.setName(new ObservableField<String>(favorite.getTitle().get()));
+        object.setTown(new ObservableField<String>(favorite.getTown().get()));
+    }
+
 
     public void favorite(){
         new myTaskToDb(allInfoActivity, object.getImg().get(), object).execute();

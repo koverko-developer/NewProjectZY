@@ -22,7 +22,11 @@ public class AdvertisingObjectFavorite extends BaseObservable {
     private ObservableField<String> title;
     private ObservableField<String> town;
     private ObservableField<String> id;
+    private ObservableField<String> pid;
     private ObservableField<String> date;
+    private ObservableField<String> description;
+    private ObservableField<String> email;
+    private ObservableField<String> phone;
 
     public AdvertisingObjectFavorite() {
         title = new ObservableField<>("");
@@ -30,6 +34,10 @@ public class AdvertisingObjectFavorite extends BaseObservable {
         town = new ObservableField<>("");
         id = new ObservableField<>();
         date = new ObservableField<>();
+        pid = new ObservableField<>();
+        description = new ObservableField<>();
+        email = new ObservableField<>();
+        phone = new ObservableField<>();
     }
 
     public ObservableField<String> getImg() {
@@ -71,6 +79,38 @@ public class AdvertisingObjectFavorite extends BaseObservable {
 
     public void setDate(ObservableField<String> pdate) {
         date.set(pdate.get());
+    }
+
+    public ObservableField<String> getPid() {
+        return pid;
+    }
+
+    public void setPid(ObservableField<String> ppid) {
+        pid.set(ppid.get());
+    }
+
+    public ObservableField<String> getDescription() {
+        return description;
+    }
+
+    public void setDescription(ObservableField<String> pdescription) {
+        description.set(pdescription.get());
+    }
+
+    public ObservableField<String> getEmail() {
+        return email;
+    }
+
+    public void setEmail(ObservableField<String> pemail) {
+        email.set(pemail.get());
+    }
+
+    public ObservableField<String> getPhone() {
+        return phone;
+    }
+
+    public void setPhone(ObservableField<String> pphone) {
+        phone.set(pphone.get());
     }
 
     @BindingAdapter({"bind:srcs"})

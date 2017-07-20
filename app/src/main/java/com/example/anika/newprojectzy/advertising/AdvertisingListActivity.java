@@ -44,7 +44,7 @@ public class AdvertisingListActivity extends AppCompatActivity {
     private static final String APP_PREFERENCES_ENG = "eng";
     private static final String APP_PREFERENCES_C = "c";
     private SharedPreferences mSettings;
-    String id;
+    String id,type;
 
 
     @SuppressLint("NewApi")
@@ -67,22 +67,22 @@ public class AdvertisingListActivity extends AppCompatActivity {
 
         Intent intent = getIntent();
         id = intent.getStringExtra("id");
-
-        switch (id){
-            case "1":
-                toolbar.setSubtitle("Объявления");
-                pid = intent.getStringExtra("pid");
-                getDataAdvertising(categoryList.size(),Integer.parseInt(pid));
-                break;
-            case "2":
-                toolbar.setSubtitle("Резюме");
-                getDataResume(categoryList.size());
-                break;
-            case "3":
-                toolbar.setSubtitle("Вакансии");
-                getDataVacansy(categoryList.size());
-                break;
+            switch (id){
+                case "1":
+                    toolbar.setSubtitle("Объявления");
+                    pid = intent.getStringExtra("pid");
+                    getDataAdvertising(categoryList.size(),Integer.parseInt(pid));
+                    break;
+                case "2":
+                    toolbar.setSubtitle("Резюме");
+                    getDataResume(categoryList.size());
+                    break;
+                case "3":
+                    toolbar.setSubtitle("Вакансии");
+                    getDataVacansy(categoryList.size());
+                    break;
         }
+
 
 
 //
@@ -178,6 +178,7 @@ public class AdvertisingListActivity extends AppCompatActivity {
         intent.putExtra("pid", pid);
         intent.putExtra("id", categoryList.get(position).getId().get());
         intent.putExtra("ids",String.valueOf(id));
+        intent.putExtra("type","0");
         startActivity(intent);
     }
 
@@ -274,6 +275,7 @@ public class AdvertisingListActivity extends AppCompatActivity {
                 String s = "";
                 for(int i = 0; i< list.size(); i++){
                     AdvertisingObject object = new AdvertisingObject();
+
                     object.setTown(new ObservableField<String>(list.get(i).getTown()));
                     object.setTitle(new ObservableField<String>(list.get(i).getName()));
                     object.setId(new ObservableField<String>(list.get(i).getId()));
